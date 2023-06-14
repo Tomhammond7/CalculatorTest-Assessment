@@ -1,0 +1,79 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+    <div class="row justify-content-center mt-5">
+        <div class="col-lg-2">
+            <button type="button" class="btn btn-primary btn-block" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Open Calculator
+            </button>
+        </div>
+    </div>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="calculatorModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="calculatorModalLabel">Calculator</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="calculatorForm" method="post">
+                        <div class="mb-3">
+                            <label for="start" class="form-label">Start</label>
+                            <input type="number" class="form-control" id="start" name="start" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="amount" class="form-label">Amount</label>
+                            <input type="number" class="form-control" id="amount" name="amount" required>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <button type="submit" class="btn btn-success" data-action="/Calculator/Add">Add</button>
+                            <button type="submit" class="btn btn-danger" data-action="/Calculator/Subtract">Subtract</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer d-flex justify-content-between">
+                    <h5 id="result"></h5>
+                    <button type="button" id="close" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row justify-content-center mt-5">
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Restyle Modal</h4>
+                    <hr>
+                    <div class="mb-3">
+                        <label for="backgroundColorInput" class="form-label">Header Color:</label>
+                        <input type="color" id="backgroundColorInput" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="backgroundColorInput1" class="form-label">Title Color:</label>
+                        <input type="color" id="backgroundColorInput1" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="backgroundColorInput2" class="form-label">Close Color:</label>
+                        <input type="color" id="backgroundColorInput2" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="fontSizeInput" class="form-label">Font Size:</label>
+                        <input type="number" id="fontSizeInput" class="form-control" min="10" max="40">
+                    </div>
+                    <button id="applyStylesButton" class="btn btn-success">Apply Styles</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
